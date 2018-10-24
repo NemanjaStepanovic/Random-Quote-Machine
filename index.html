@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Random Quote Machine</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon.ico -->
+    <link href="https://s3.amazonaws.com/freecodecamp/favicons/android-chrome-192x192.png" rel="shortcut icon" />
+    <!-- CSS i media queries -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body class="container-fluid">
+    <!-- Naslov web strane -->
+    <header class="text-center">
+      <h1>Random Quote Machine</h1>
+    </header>
+
+    <!-- Dugme za generisanje citata -->
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <button class="btn btn-success" id="quoteButton">Start</button>
+      </div>
+    </div>
+
+    <!-- Citati, autori i Twitter dugme -->
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2" id="main-box">
+        <!-- Citat -->
+        <p class="text-center" id="quote">Click the start button to get inspired!</p>
+        <!-- Autor -->
+        <p id="author" title="Author"></p>
+        <!-- Twitter dugme -->
+        <a href="#" target="_blank" title="Tweet this quote"><img src="https://seeklogo.com/images/T/twitter-2012-negative-logo-5C6C1F1521-seeklogo.com.png" alt="Twitter logo" id="logo" /></a>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
