@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     var quotes = [
         "It always seems impossible until it's done", // 0
         "You know you're in love when you can't fall asleep because reality is finally better than your dreams", // 1
@@ -105,20 +105,21 @@ $(document).ready(function () {
     ];
     var elementPos; // Variable for storing position of the element in the arrays
 
-    $("#quoteButton").on("click", function () {
+    $("#quoteButton").on("click", function() {
         $("#quoteButton").html("Next quote");
         $("#logo").css("visibility", "visible");
 
-        if (quotes.length === 0) {
+        if(quotes.length === 0) {
             $("#quote").html("You read all quotes!");
             $("#author").html("");
             $("#logo").css("visibility", "hidden");
             $("#quoteButton").html("Read again");
 
-            $("#quoteButton").on("click", function () {
+            $("#quoteButton").on("click", function() {
                 history.go(0); // Refresh the page
             });
-        } else {
+        }
+        else {
             elementPos = Math.floor(Math.random() * authors.length);
 
             $("#quote").html("<q>" + quotes[elementPos] + "</q>");
@@ -129,7 +130,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#logo").on("click", function () {
+    $("#logo").on("click", function() {
         $("a").attr("href", "https://twitter.com/intent/tweet?text=" + $("#quote").text() + ". (" + $("#author").text() + ")");
     });
 });
