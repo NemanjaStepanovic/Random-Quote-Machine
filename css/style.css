@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Felipa');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
 /* Universal styles */
 body {
     background-image: url("https://image.ibb.co/b83AJV/OGoOmxs.jpg");
@@ -5,128 +8,73 @@ body {
     background-size: 100vw 100vh;
 }
 
-/* Main styles */
+/* Headline styles */
 header h1 {
     color: slateblue;
-    font-family: algerian, serif;
-    font-size: 400%;
+    font-family: 'Felipa', cursive;
     background: white;
-    opacity: 0.8;
+    opacity: 0.9;
+    font-size: 6rem;
 }
 
-#quoteButton {
-    font-size: 2rem;
-    margin-top: 10vh;
-    margin-bottom: 2vh;
-    font-variant: small-caps;
-}
-
-#main-box {
-    position: relative;
+/* Quote box styles */
+#quote-box {
     border-radius: 10px;
     background-color: slateblue;
     color: white;
-    opacity: 0.8;
-    margin-bottom: 2vh;
+    opacity: 0.9;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-family: 'Inconsolata', monospace;
+    font-size: 2.5rem;
 }
 
-#quote {
-    font-family: "Courier New";
-    font-size: 2rem;
-    margin-top: 8vh;
-    margin-bottom: 8vh;
+#new-quote {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-variant: small-caps;
+    font-size: 2.5rem;
+}
+
+#text {
+    margin: 0 2vw 20vh 2vw;
 }
 
 #author {
     font-style: italic;
-    font-size: 1.75rem;
     font-variant: small-caps;
     position: absolute;
-    bottom: 3%;
-    left: 3%;
+    bottom: 2vh;
+    left: 2vw;
+    cursor: default;
 }
 
-#logo {
+#tweet-quote #logo {
     width: 45px;
     position: absolute;
-    bottom: 3%;
-    right: 3%;
+    bottom: 2vh;
+    right: 2vw;
     border-radius: 10px;
-    visibility: hidden;
 }
 
 
 /** Media queries **/
-/* Smartphone styles */
-@media only screen and (max-width: 480px) {
-    /* Main styles */
+@media (max-width: 666px) {
+    /* Headline styles */
     header h1 {
-        font-size: 150%;
+        font-size: 3rem;
     }
 
-    #quoteButton {
-        font-size: 1rem;
-    }
-
-    #quote {
-        font-size: 1rem;
-    }
-
-    #author {
-        font-size: 0.75rem;
-    }
-
-    #logo {
-        width: 30px;
-    }
-}
-
-
-/* Tablet stlyes */
-@media only screen and (min-width: 481px) and (max-width: 752px) {
-    /* Main styles */
-    header h1 {
-        font-size: 200%;
-    }
-
-    #quoteButton {
+    /* Quote box styles */
+    #quote-box {
         font-size: 1.5rem;
     }
 
-    #quote {
+    #new-quote {
         font-size: 1.5rem;
     }
 
-    #author {
-        font-size: 1.25rem;
-    }
-
-    #logo {
+    #tweet-quote #logo {
         width: 35px;
-    }
-}
-
-
-/* Laptop styles */
-@media only screen and (min-width: 753px) and (max-width: 1024px) {
-    /* Main styles */
-    header h1 {
-        font-size: 300%;
-    }
-
-    #quoteButton {
-        font-size: 1.75rem;
-    }
-
-    #quote {
-        font-size: 1.75rem;
-    }
-
-    #author {
-        font-size: 1.5rem;
-    }
-
-    #logo {
-        width: 40px;
     }
 }

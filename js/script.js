@@ -104,33 +104,35 @@ $(document).ready(function() {
         "Nick Vujičić" // 49
     ];
     var elementPos; // Variable for storing position of the element in the arrays
+    var generateNextQuote = function() {
+        elementPos = Math.floor(Math.random() * authors.length);
 
-    $("#quoteButton").on("click", function() {
-        $("#quoteButton").html("Next quote");
-        $("#logo").css("visibility", "visible");
+        $("#text").html("<q>" + quotes[elementPos] + "</q>");
+        $("#author").html("<small>by</small> " + authors[elementPos]);
 
+        quotes.splice(elementPos, 1); // Eliminate already shown quote
+        authors.splice(elementPos, 1); // Eliminate already shown author
+    };
+
+    generateNextQuote();
+
+    $("#new-quote").on("click", function() {
         if(quotes.length === 0) {
-            $("#quote").html("You read all quotes!");
+            $("#text").html("You read all quotes!");
             $("#author").html("");
             $("#logo").css("visibility", "hidden");
-            $("#quoteButton").html("Read again");
+            $("#new-quote").html("Read again");
 
-            $("#quoteButton").on("click", function() {
-                history.go(0); // Refresh the page
+            $("#new-quote").on("click", function() {
+                location.reload(); // Refresh the page
             });
         }
         else {
-            elementPos = Math.floor(Math.random() * authors.length);
-
-            $("#quote").html("<q>" + quotes[elementPos] + "</q>");
-            $("#author").html(authors[elementPos]);
-
-            quotes.splice(elementPos, 1); // Eliminate already shown quote
-            authors.splice(elementPos, 1); // Eliminate already shown author
+            generateNextQuote();
         }
     });
 
     $("#logo").on("click", function() {
-        $("a").attr("href", "https://twitter.com/intent/tweet?text=" + $("#quote").text() + ". (" + $("#author").text() + ")");
+        $("a").attr("href", "https://twitter.com/intent/tweet?text=" + $("#text").text() + ". (" + $("#author").text() + ")");
     });
 });

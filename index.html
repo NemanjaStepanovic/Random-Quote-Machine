@@ -1,15 +1,18 @@
+<!-- Website: freeCodeCamp -->
+<!-- Certification: Front End Libraries -->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Random Quote Machine</title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- favicon.ico -->
-        <link href="https://image.ibb.co/icGEVA/android-chrome-192x192.png" rel="shortcut icon" />
+        <link href="https://image.ibb.co/icGEVA/android-chrome-192x192.png" rel="shortcut icon">
+        <!-- Bootstrap v3.3.7 -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <!-- CSS and media queries -->
-        <link href="css/style.css" rel="stylesheet" />
-        <!-- Bootstrap CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body class="container-fluid">
         <!-- Headline -->
@@ -17,29 +20,22 @@
             <h1>Random Quote Machine</h1>
         </header>
 
-        <!-- Button for generating quotes -->
+        <!-- Quotes, authors and Twitter link -->
         <div class="row">
-            <div class="col-xs-12 text-center">
-                <button class="btn btn-success" id="quoteButton">Start</button>
-            </div>
-        </div>
-
-        <!-- Quotes, authors and Twitter button -->
-        <div class="row">
-            <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2" id="main-box">
+            <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2" id="quote-box">
+                <!-- Button for generating quotes -->
+                <button class="btn btn-success center-block" id="new-quote">Next quote</button>
                 <!-- Quote -->
-                <p class="text-center" id="quote">Click the start button to get inspired!</p>
+                <p class="text-center" id="text"></p>
                 <!-- Author -->
-                <p id="author" title="Author"></p>
-                <!-- Twitter button -->
-                <a href="#" target="_blank" title="Tweet this quote"><img src="https://image.ibb.co/gS6EdV/Twitter-logo.png" alt="Twitter logo" id="logo" /></a>
+                <p id="author"></p>
+                <!-- Twitter link -->
+                <a href="twitter.com/intent/tweet" target="_blank" title="Tweet this quote" id="tweet-quote"><img src="https://image.ibb.co/gS6EdV/Twitter-logo.png" alt="Twitter logo" id="logo"></a>
             </div>
         </div>
 
-        <!-- jQuery -->
+        <!-- jQuery v3.3.1 -->
         <script src="js/jquery-3.3.1.min.js"></script>
-        <!-- Bootstrap JS -->
-        <script src="js/bootstrap.min.js"></script>
         <!-- JavaScript -->
         <script src="js/script.js"></script>
     </body>
